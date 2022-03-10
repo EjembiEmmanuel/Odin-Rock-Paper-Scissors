@@ -54,5 +54,20 @@ function game() {
     return result;
 }
 
+for(let i = 1; i <= 5; i++) {
+    console.log(game());
+    console.log("Player Score: ", playerScore);
+    console.log("Computer Score: ", computerScore);
+}
 
+function winner() {
+    console.log("================================================");
+    if(playerScore > computerScore) {
+        return "You Win after five rounds";
+    } else {
+        return "You Lose after five rounds";
+    }
+}
+
+console.log(winner());
 
