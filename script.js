@@ -48,7 +48,7 @@ function play(playerSelection, computerSelection) {
 
 function game() {
     let computerChoice = computerPlay();
-    let playerChoice = 'Rock';
+    let playerChoice = prompt("Choose between Rock, Paper, or Scissors");
     let result;
     result = play(playerChoice, computerChoice);
     return result;
