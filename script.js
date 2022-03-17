@@ -21,7 +21,7 @@ function play(playerSelection, computerSelection) {
     } else if(playerSelection.toLowerCase() === 'scissors' && computerSelection.toLowerCase() === 'paper') {
         playerScore++;
         return "You Win! Scissors cuts Paper";
-    } else if(playerSelection.toLowerCase() === 'scissors' && computerSelection.toLowerCase() === 'Scissors') {
+    } else if(playerSelection.toLowerCase() === 'scissors' && computerSelection.toLowerCase() === 'scissors') {
         return "It's a tie";
     } else if(playerSelection.toLowerCase() === 'scissors' && computerSelection.toLowerCase() === 'rock') {
         computerScore++;

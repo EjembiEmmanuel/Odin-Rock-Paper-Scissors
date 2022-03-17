@@ -4,39 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
     <title>Rock Paper Scissors</title>
 </head>
 <body>
 
-    <div class="choices">
-        <button class="choice">Rock</button>
-        <button class="choice">Paper</button>
-        <button class="choice">Scissors</button>
+    <div class="choices-section">
+        <div><p>Click any of the buttons below to make a choice. 5 points wins the game.</p></div>
+        <div class="choices">
+            <button class="choice">Rock</button>
+            <button class="choice">Paper</button>
+            <button class="choice">Scissors</button>
+        </div>
     </div>
 
     <div class="selection">
-        <div>
-            <span>Player Selection: <p class="player-selection"></p></span>
+        <div class="player">
+            <h2>Player Selection: </h2>
+            <p class="player-selection"></p>
         </div>
-        <div>
-            <span>Computer Selection: <p class="computer-selection"></p></span>
+        <div class="computer">
+            <h2>Computer Selection: </h2>
+            <p class="computer-selection"></p>
         </div>
     </div>
 
-    <div>
-        <span>Result: <p class="result"></p></span>
+    <div class="result-section">
+        <h2>Result: </h2>
+        <p class="result"></p>
     </div>
 
+    
     <div class="scores">
-        <div>
-            <span>Player Score: <p class="player-score">0</p></span>
+        <div class="player">
+            <h2>Player Score: </h2>
+            <p class="player-score">0</p>
         </div>
-        <div>
-            <span>Computer Score: <p class="computer-score">0</p></span>
+        <div class="computer">
+            <h2>Computer Score: </h2>
+            <p class="computer-score">0</p>
         </div>
     </div>
 
-    <div>
+    <div class="winner-section">
         <p class="winner"></p>
     </div>
     
