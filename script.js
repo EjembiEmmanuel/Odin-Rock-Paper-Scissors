@@ -47,23 +47,26 @@ function play(playerSelection, computerSelection) {
 }
 
 function game() {
-    let computerChoice = computerPlay();
-    let playerChoice = prompt("Choose between Rock, Paper, or Scissors");
+    let playerSelection;
+    if(this.textContent == 'Rock' || this.textContent == 'Paper' || this.textContent == 'Scissors') {
+        playerSelection = this.textContent;
+    }
+
+    let computerSelection = computerPlay();
     let result;
-    result = play(playerChoice, computerChoice);
-    return result;
+    result = play(playerSelection, computerSelection);
+    console.log("Computer Selection: ", computerSelection);
+    console.log("Player Selction: ", playerSelection);
+    console.log(result);
 }
 
+
+let choices = document.querySelectorAll('.choice');
+choices.forEach(choice => choice.addEventListener('click', game));
 
 
 function winner() {
-    console.log("================================================");
-    if(playerScore > computerScore) {
-        return "You Win after five rounds";
-    } else {
-        return "You Lose after five rounds";
-    }
+    
 }
 
-console.log(winner());
 
