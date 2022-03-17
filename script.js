@@ -37,6 +37,7 @@ function play(playerSelection, computerSelection) {
     }
 }
 
+
 function game() {
     let playerSelection;
     if(this.textContent == 'Rock' || this.textContent == 'Paper' || this.textContent == 'Scissors') {
@@ -60,11 +61,27 @@ function game() {
     playerDisplayScore.textContent = playerScore;
     computerDisplayScore.textContent = computerScore;
 
+    function resetGame() {
+        playerScore = 0;
+        computerScore = 0;
+        result = "";
+        playerSelection = "";
+        computerSelection = "";
+        playerDisplaySelection.textContent = playerSelection;
+        computerDisplaySelection.textContent = computerSelection;
+        displayResult.textContent = result;
+        playerDisplayScore.textContent = playerScore;
+        computerDisplayScore.textContent = computerScore;
+        
+    }
+
     let winner = document.querySelector('.winner');
     if(playerScore == 5) {
+        resetGame();
         winner.textContent = "You Win!!!!";
         winner.style.cssText = "color: green; font-size: 24px; font-weight: bold";
     } else if(computerScore == 5) {
+        resetGame();
         winner.textContent = "You Lose, the computer wins.";
         winner.style.cssText = "color: red; font-size: 24px; font-weight: bold";
     }
