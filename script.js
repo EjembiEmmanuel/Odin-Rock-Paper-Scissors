@@ -12,36 +12,27 @@ let computerScore = 0;
 function play(playerSelection, computerSelection) {
     if(playerSelection.toLowerCase() === 'rock' && computerSelection.toLowerCase() === 'paper') {
         computerScore++;
-        console.log("*******************************");
         return "You Lose! Paper covers Rock";
     } else if(playerSelection.toLowerCase() === 'rock' && computerSelection.toLowerCase() === 'scissors') {
         playerScore++;
-        console.log("*******************************");
         return "You Win! Rocks smashes Scissors";
     } else if(playerSelection.toLowerCase() === 'rock' && computerSelection.toLowerCase() === 'rock') {
-        console.log("*******************************");
         return "It's a tie";
     } else if(playerSelection.toLowerCase() === 'scissors' && computerSelection.toLowerCase() === 'paper') {
         playerScore++;
-        console.log("*******************************");
         return "You Win! Scissors cuts Paper";
     } else if(playerSelection.toLowerCase() === 'scissors' && computerSelection.toLowerCase() === 'Scissors') {
-        console.log("*******************************");
         return "It's a tie";
     } else if(playerSelection.toLowerCase() === 'scissors' && computerSelection.toLowerCase() === 'rock') {
         computerScore++;
-        console.log("*******************************");
         return "You Lose! Rock smashes scissors";
     } else if(playerSelection.toLowerCase() === 'paper' && computerSelection.toLowerCase() === 'paper') {
-        console.log("*******************************");
         return "It's a tie";
     } else if(playerSelection.toLowerCase() === 'paper' && computerSelection.toLowerCase() === 'rock') {
         playerScore++;
-        console.log("*******************************");
         return "You Win! Paper covers Rock";
     } else if(playerSelection.toLowerCase() === 'paper' && computerSelection.toLowerCase() === 'scissors') {
         computerScore++;
-        console.log("*******************************");
         return "You Lose! Scissors cuts Paper";
     }
 }
@@ -55,18 +46,31 @@ function game() {
     let computerSelection = computerPlay();
     let result;
     result = play(playerSelection, computerSelection);
-    console.log("Computer Selection: ", computerSelection);
-    console.log("Player Selction: ", playerSelection);
-    console.log(result);
+
+    let playerDisplaySelection = document.querySelector('.player-selection')
+    let computerDisplaySelection = document.querySelector('.computer-selection')
+    playerDisplaySelection.textContent = playerSelection;
+    computerDisplaySelection.textContent = computerSelection;
+
+    let displayResult = document.querySelector('.result');
+    displayResult.textContent = result;
+    
+    let playerDisplayScore = document.querySelector('.player-score')
+    let computerDisplayScore = document.querySelector('.computer-score')
+    playerDisplayScore.textContent = playerScore;
+    computerDisplayScore.textContent = computerScore;
+
+    let winner = document.querySelector('.winner');
+    if(playerScore == 5) {
+        winner.textContent = "You Win!";;
+    } else if(computerScore == 5) {
+        winner.textContent = "You Lose, the computer wins.";
+    }
 }
 
 
 let choices = document.querySelectorAll('.choice');
 choices.forEach(choice => choice.addEventListener('click', game));
 
-
-function winner() {
-    
-}
 
 
