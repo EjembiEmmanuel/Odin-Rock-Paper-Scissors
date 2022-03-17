@@ -62,9 +62,11 @@ function game() {
 
     let winner = document.querySelector('.winner');
     if(playerScore == 5) {
-        winner.textContent = "You Win!";;
+        winner.textContent = "You Win!!!!";
+        winner.style.cssText = "color: green; font-size: 24px; font-weight: bold";
     } else if(computerScore == 5) {
         winner.textContent = "You Lose, the computer wins.";
+        winner.style.cssText = "color: red; font-size: 24px; font-weight: bold";
     }
 }
 
