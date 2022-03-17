@@ -54,11 +54,7 @@ function game() {
     return result;
 }
 
-for(let i = 1; i <= 5; i++) {
-    console.log(game());
-    console.log("Player Score: ", playerScore);
-    console.log("Computer Score: ", computerScore);
-}
+
 
 function winner() {
     console.log("================================================");
